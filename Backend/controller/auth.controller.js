@@ -45,50 +45,7 @@ import { sendOtpmail } from "../utills/mail.js";
         res.status(500).json({ message: `user created succsessfully ${error}`,});
     }
 }
-//  export const signIn = async(req,res)=>{
-    
-//     try{
-//      const {email,password,role}=req.body;
-//      const user = await User.findOne({email});
-//      if(!user){
-//         return res.status(400).json({message:"user does not exists"});
-
-//      }
-     
-//      if(!role==user.role){
-//         return res.status(400).json({message:"invalid role"});
-
-//      }
-//      const isMatch= await bcrypt.compare(password,user.password);
-//         if(!isMatch){
-//             return res.status(400).json({message:"invalid password"});
-//         }
-
-
-
-//     //  const hashedPassword= await bcrypt.hash(password,10);
-//     //  user= await User.create({
-//     //     fullname,
-//     //     email,
-//     //     password:hashedPassword,
-//     //     mobile,
-//     //     role,
-//     //  })
-//       const token= await genToken(user._id);
-//       res.cookie("token",token,{
-//         httpOnly:true,
-//         secure:false,
-        
-//         sameSite:"Strict",
-//         maxAge:7*24*60*60*1000,
-//     })
-//         res.status(200).json({ message:"user signin sucessful",user});
-
-//     }
-//     catch(error){
-//         res.status(500).json({ message: `signIn error ${error}`,});
-//     }
-// }
+//  
 export const signIn = async (req, res) => {
   try {
     const { email, password, role } = req.body;

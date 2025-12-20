@@ -1,63 +1,7 @@
 import { Shop } from "../model/shop.model.js";
 import uploadCloudinary from "../utills/cloudinary.js";
 
-// CREATE or EDIT shop
-// export const createEditShop = async (req, res) => {
-//   try {
-//     const { name, city, state, address } = req.body;
 
-//     if (!name || !city || !state || !address) {
-//       return res.status(400).json({ message: "All fields are required" });
-//     }
-
-//     // ✅ SAFE owner id
-//     const ownerId = req.user._id;
-
-//     let imageUrl;
-
-//     // ✅ upload image only if file exists
-//     if (req.file) {
-//       const uploadRes = await uploadCloudinary(req.file.path);
-//       imageUrl = uploadRes.secure_url; // ✅ use secure_url
-//     }
-
-//     let shop = await Shop.findOne({ owner: ownerId });
-
-//     if (!shop) {
-//       // CREATE
-//       shop = await Shop.create({
-//         name,
-//         city,
-//         state,
-//         address,
-//         image: imageUrl,
-//         owner: ownerId,
-//       });
-//     } else {
-//       // EDIT
-//       shop.name = name;
-//       shop.city = city;
-//       shop.state = state;
-//       shop.address = address;
-
-//       if (imageUrl) {
-//         shop.image = imageUrl; // ✅ update image only if new one exists
-//       }
-
-//       await shop.save();
-//     }
-
-//     await shop.populate("owner");
-
-//     return res.status(200).json(shop);
-//   } catch (error) {
-//     console.error("createEditShop error:", error);
-//     return res.status(500).json({
-//       message: "Shop create/update failed",
-//       error: error.message,
-//     });
-//   }
-// };
 export const createEditShop = async (req, res) => {
   try {
     const { name, city, state, address } = req.body;

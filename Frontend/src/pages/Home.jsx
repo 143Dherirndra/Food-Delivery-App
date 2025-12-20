@@ -1,23 +1,4 @@
-// import { useSelector } from "react-redux"
-// import Deliveryboy from "../component/deliveryboy"
-// import OwerDashboard from "../component/OwerDashboard"
-// import UserDashboard from "../component/UserDashboard"
-// // 
 
-// function Home(){
-//   // const {userdta}=(state=>state.user)
-//   const {userData}= useSelector(state=>state.user)
-//   console.log(userData)
-//   return(
-//     <div className=" bg-[#fff9f6]" >
-//       {/* <UserDashboard/> */}
-//       {userData.role== 'user' && <UserDashboard/>}
-//       {userData.role=='owner' && <OwerDashboard/>}
-//       {userData.role=='deliveryboy' && <Deliveryboy/>}
-//     </div>
-//   )
-// }
-// export default Home
 
 import { useSelector } from "react-redux";
 import Deliveryboy from "../component/deliveryboy";
