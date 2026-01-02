@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import Nav from "./nav";
+import Nav from "./Nav";
 import { categories } from "../category";
 import Category from "./Category";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
