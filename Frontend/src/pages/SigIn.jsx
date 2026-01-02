@@ -7,6 +7,7 @@ import { auth } from '../../firebase';
 import { useDispatch } from 'react-redux';
 import { setUserData } from '../redux/userSlice';
 import { useNavigate } from 'react-router-dom';
+import { BACKEND_URL } from '../auth';
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function SignIn() {
       setLoading(true);
 
       const res = await axios.post(
-        'http://localhost:4000/api/auth/signIn',
+        `${BACKEND_URL}api/auth/signIn`,
         { email, password, role },
         { withCredentials: true }
       );
@@ -65,7 +66,7 @@ function SignIn() {
       };
 
       await axios.post(
-        'http://localhost:4000/api/auth/googleAuth',
+        `${BACKEND_URL}api/auth/googleAuth`,
         {
           fullname: payload.name,
           email: payload.email,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import SignIn from "./pages/SigIn.jsx";
-import SignUp from "./pages/signup.jsx";
+import SignUp from "./pages/SignUp.jsx";
 
 import useGetCurrentUser from "./hooks/useGetCurrentUser.jsx";
 import { useSelector } from "react-redux";
