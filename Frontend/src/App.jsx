@@ -6,7 +6,7 @@ import SignUp from "./pages/SignUp.jsx";
 import useGetCurrentUser from "./hooks/useGetCurrentUser.jsx";
 import { useSelector } from "react-redux";
 import Home from "./pages/Home.jsx";
-import ForgatePassword from "./pages/forgatePassword.jsx";
+import ForgatePassword from "./pages/ForgatePassword.jsx";
 import useGet from "./hooks/useGet.jsx";
 import useGetmyShop from "./hooks/useGetmyShop.jsx";
 import CreateEditshop from "./pages/createEditshop.jsx";
