@@ -1,7 +1,7 @@
 
 
 import { useSelector } from "react-redux";
-import Deliveryboy from "../component/deliveryboy";
+import Deliveryboy from "../component/Deliveryboy";
 import OwerDashboard from "../component/OwerDashboard";
 import UserDashboard from "../component/UserDashboard";
 import { useEffect } from "react";
